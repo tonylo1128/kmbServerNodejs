@@ -8,10 +8,7 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      路線所屬巴士公司: {
-        type: Sequelize.STRING
-      },
-      定位: {
+      巴士路線所屬公司: {
         type: Sequelize.STRING
       },
       路線: {
@@ -20,10 +17,14 @@ module.exports = {
       起點: {
         type: Sequelize.STRING
       },
-      目的地: {
+      方向:{
         type: Sequelize.STRING
       },
-      完成: {
+      目的地: {
+        type: Sequelize.STRING
+
+      },
+      完成挑戰: {
         type: Sequelize.STRING
       },
       開始時間: {
