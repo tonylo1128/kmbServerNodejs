@@ -16,4 +16,4 @@ app.post("/postData" , kmbDataCon.postDataFunc)
 app.get("/", kmbDataCon.getData)
 app.post("/getbustime", kmbDataCon.getBusTime)
 
-app.listen(8001)
+app.listen(process.env.PORT)
