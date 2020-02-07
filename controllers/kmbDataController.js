@@ -9,6 +9,10 @@ module.exports = {
   },
 
   getData: (req, res) => {
+    let ip = require("ip");
+    console.log("Someone using get in the website and he/ she is: ")
+    console.dir ( ip.address() );
+
     kmbDataRepos.getDataFromServer().then(recieveRespFromkmbDataRepos => {
       res.json({
         recieveRespFromkmbDataRepos: recieveRespFromkmbDataRepos
@@ -17,8 +21,8 @@ module.exports = {
   },
 
   getBusTime: (req, res) => {
-    let ip = require("ip");
-    console.log("Someone using get time function and he/ she is: ")
+    // let ip = require("ip");
+    // console.log("Someone using get time function and he/ she is: ")
     console.dir ( ip.address() );
     const inputA = req.body.inputA;
 
