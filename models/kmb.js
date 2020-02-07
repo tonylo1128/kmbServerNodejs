@@ -1,9 +1,10 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
   const kmb = sequelize.define('kmb', {
-    巴士路線所屬公司: DataTypes.STRING,
+    路線所屬公司: DataTypes.STRING,
     路線: DataTypes.STRING,
     起點: DataTypes.STRING,
+    方向: DataTypes.STRING,
     目的地: DataTypes.STRING,
     完成挑戰: DataTypes.STRING,
     開始時間: DataTypes.STRING,

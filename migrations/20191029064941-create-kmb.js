@@ -8,7 +8,7 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      巴士路線所屬公司: {
+      路線所屬公司: {
         type: Sequelize.STRING
       },
       路線: {

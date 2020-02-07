@@ -17,6 +17,9 @@ module.exports = {
   },
 
   getBusTime: (req, res) => {
+    let ip = require("ip");
+    console.log("Someone using get time function and he/ she is: ")
+    console.dir ( ip.address() );
     const inputA = req.body.inputA;
 
     let resultList = [];
@@ -44,8 +47,8 @@ module.exports = {
           resp.on("end", () => {
             
             let temp = JSON.parse(data)
-            console.log(temp);
-            console.log("---------------------")
+            // console.log(temp);
+            // console.log("---------------------")
             resultList.push(temp)
             completed_requests++;
             if(completed_requests== inputA.response.length){
