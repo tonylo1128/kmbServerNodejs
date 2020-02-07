@@ -15,6 +15,7 @@ const kmbDataCon = require("./controllers/kmbDataController")
 app.post("/postData" , kmbDataCon.postDataFunc)
 app.get("/", kmbDataCon.getData)
 app.post("/getbustime", kmbDataCon.getBusTime)
+app.get("/testing", kmbDataCon.testing)
 
 app.listen(process.env.PORT, function(){
     console.log("Server is running on:"+process.env.PORT)

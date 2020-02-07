@@ -8,6 +8,12 @@ module.exports = {
     kmbDataRepos.insertRecordS(temp);
   },
 
+  testing : (req, res)=>{
+    res.json({
+      testing 
+    })
+  },
+
   getData: (req, res) => {
     let ip = require("ip");
     console.log("Someone using get in the website and he/ she is: ")
