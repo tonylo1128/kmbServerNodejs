@@ -3,7 +3,7 @@ const app = express();
 const cors = require ('cors');
 const bodyParser = require ('body-parser');
 const multer = require('multer');
-
+const port = process.env.PORT || 8081;
 
 app.use(cors());
 app.use(bodyParser.json({ limit: '50mb' }));
@@ -17,6 +17,6 @@ app.get("/", kmbDataCon.getData)
 app.post("/getbustime", kmbDataCon.getBusTime)
 app.get("/testing", kmbDataCon.testing)
 
-app.listen(process.env.PORT, function(){
-    console.log("Server is running on:"+process.env.PORT)
+app.listen(port, function(){
+    console.log("Server is running on:"+port)
 })
