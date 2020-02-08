@@ -9,8 +9,9 @@ module.exports = {
   },
 
   testing : (req, res)=>{
+    console.log("Testing");
     res.json({
-      testing 
+      testing:"testing"
     })
   },
 
