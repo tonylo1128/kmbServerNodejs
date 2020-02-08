@@ -30,7 +30,11 @@ module.exports = {
   getBusTime: (req, res) => {
     // let ip = require("ip");
     // console.log("Someone using get time function and he/ she is: ")
-    console.dir ( ip.address() );
+    // console.dir ( ip.address() );
+
+    try {
+
+    
     const inputA = req.body.inputA;
 
     let resultList = [];
@@ -67,7 +71,6 @@ module.exports = {
                 dataForBusData:resultList
               })
             }
-           
           })
           
           
@@ -78,39 +81,16 @@ module.exports = {
     console.log("THIS IS THE END OF THE FOR LOOP")
     console.log(resultList)
 
-    
 
-
-    // http.get(
-    //   "http://etav3.kmb.hk/?action=geteta&lang=tc&route=" +
-    //     inputA.route +
-    //     "&bound=" +
-    //     inputA.bound +
-    //     "&stop_seq=" +
-    //     inputB +
-    //     "&servicetype=" +
-    //     inputA.serviceType +
-    //     "&updatedTime=1531798892000",
-    //   resp => {
-    //     let data = "";
-
-    //     // A chunk of data has been recieved.
-    //     resp.on("data", chunk => {
-    //       data += chunk;
-    //     });
-
-    //     // The whole response has been received. Print out the result.
-    //     resp.on("end", () => {
-    //       console.log(data);
-    //       res.json({
-    //           dataForBusData: data
-    //       })
-    //     });
-    //   }
-    // );
-
-
-
+  } catch (e) {
+    res.json({
+      message: e.message
+    })
+  } 
 
   }
+
+
+
+  
 };
