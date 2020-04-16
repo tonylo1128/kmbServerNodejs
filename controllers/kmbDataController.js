@@ -8,6 +8,30 @@ module.exports = {
     kmbDataRepos.insertRecordS(temp);
   },
 
+  PartOfDataPerPageFunc: (req, res)=>{
+    var page = req.query.page;
+    var per_page = req.query.per_page;
+    if(page==null || per_page ==null || page==1){
+      page = 0;
+      per_page=30;
+    }
+    else{
+      page--;
+    }
+
+    kmbDataRepos.PartOfDataPerPageFunc(page, per_page)
+    .then(
+      responseFromRepos =>{
+
+        res.json({
+          recieveRespFromkmbDataRepos: 
+            responseFromRepos.length>0?  responseFromRepos : "There is no result"
+      })
+      }
+    )
+    
+  },
+
   testing : (req, res)=>{
     console.log("Testing");
     res.json({

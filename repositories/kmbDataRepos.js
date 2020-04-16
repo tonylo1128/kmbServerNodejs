@@ -10,6 +10,20 @@ module.exports = {
         { returning: true });
     },
 
+    PartOfDataPerPageFunc(page, perPage){
+        return models.kmb
+        .findAll(
+            {
+                limit:perPage,
+                offset: page*perPage
+            }
+        )
+        .then( response=>{
+            return response
+        })
+       
+    },
+
     getDataFromServer(){
         return models.kmb
         .findAll()
