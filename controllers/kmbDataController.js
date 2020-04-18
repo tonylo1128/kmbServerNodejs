@@ -8,6 +8,28 @@ module.exports = {
     kmbDataRepos.insertRecordS(temp);
   },
 
+
+
+
+  searchingFunc : (req, res)=>{
+    console.log("We are in the first steop of searching")
+    const recievedValue = req.body.inputSearchValue;
+
+    console.log(recievedValue)
+    const serachKeywords = "235";
+    
+    kmbDataRepos.searchingRFunc(recievedValue)
+    .then(resp=>{
+        res.json({
+          returnResp: resp
+        });
+      })
+  },
+
+
+
+
+
   PartOfDataPerPageFunc: (req, res)=>{
     var page = req.query.page;
     var per_page = req.query.per_page;
