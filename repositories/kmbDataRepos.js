@@ -26,6 +26,22 @@ module.exports = {
        
     },
 
+    getSpecific(input){
+        return models.kmb
+        .findAll(
+            {
+                where:{
+                    id:input.id,
+                    路線:input.route,
+                    路線所屬公司: input.company
+                }
+            }
+        )
+        .then( response=>{
+            return response
+        })
+    },
+
     searchingRFunc(input){
         return models.kmb
         .findAll({

@@ -20,7 +20,7 @@ app.get("/testing", kmbDataCon.testing)
 
 
 app.get("/getdata", kmbDataCon.PartOfDataPerPageFunc )
-
+app.get("/getspecific", kmbDataCon.getSpecific )
 
 app.post("/seaching", kmbDataCon.searchingFunc)
 

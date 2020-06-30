@@ -54,6 +54,15 @@ module.exports = {
     
   },
 
+  getSpecific:(req,res)=>{
+    kmbDataRepos.getSpecific(req.body)
+    .then((resp)=>{
+      res.json({
+        resp
+      })
+    })
+  },
+
   testing : (req, res)=>{
     console.log("Testing");
     res.json({
