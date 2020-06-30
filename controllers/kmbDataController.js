@@ -75,6 +75,9 @@ module.exports = {
     .then(respFromReps=>{
       console.log("Here is the respFromReps !")
       console.log(respFromReps)
+      res.json({
+        respFromReps
+      })
     })
 
     // res.json({
