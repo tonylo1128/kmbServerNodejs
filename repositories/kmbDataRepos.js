@@ -66,14 +66,21 @@ module.exports = {
     },
 
     updateRecord(input){
+        let state=""
+        if(input.開始時間 !=""  &&  input.結束時間 !="")
+            state= "完成挑戰"
+        else
+            state= "未完成"
+
         return models.kmb
         .update(
             {
-            開始時間:input.startTime,
-            結束時間:input.endTime, 
-            總行程時間:input.total,
-            Instagram記錄連結:input.igLink,
-            備註:input.remake,
+                完成挑戰: state,
+                開始時間:input.startTime,
+                結束時間:input.endTime, 
+                總行程時間:input.total,
+                Instagram記錄連結:input.igLink,
+                備註:input.remake,
             }
         ,
         {
