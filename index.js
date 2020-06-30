@@ -24,6 +24,14 @@ app.get("/getdata", kmbDataCon.PartOfDataPerPageFunc )
 
 app.post("/seaching", kmbDataCon.searchingFunc)
 
+app.delete("/delete",kmbDataCon.deleteOne)
+
+app.put("/update", kmbDataCon.updateRecord)
+
+// app.delete("/deleteall",kmbDataCon.delete)
+
 app.listen(port, function(){
     console.log("Server is running on:"+port)
 })
+
+

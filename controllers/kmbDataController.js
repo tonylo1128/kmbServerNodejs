@@ -61,6 +61,31 @@ module.exports = {
     })
   },
 
+  deleteOne: (req, res)=>{
+    console.log("Congrats ! it work ! sucker !! You are in deleteOneFunction now ! ! !")
+  },
+
+
+  updateRecord:(req, res)=>{
+
+    let temp = req.body
+    console.log(req.body)
+
+    kmbDataRepos.updateRecord(temp)
+    .then(respFromReps=>{
+      console.log("Here is the respFromReps !")
+      console.log(respFromReps)
+    })
+
+    // res.json({
+    //   MotherFucker:"MotherFucker"
+    // })
+
+
+  },
+
+
+
   getData: (req, res) => {
     let ip = require("ip");
     console.log("Someone using get in the website and he/ she is: ")

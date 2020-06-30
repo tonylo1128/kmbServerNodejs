@@ -16,7 +16,8 @@ module.exports = {
         .findAll(
             {
                 limit:perPage,
-                offset: page*perPage
+                offset: page*perPage,
+                order:['id']
             }
         )
         .then( response=>{
@@ -54,10 +55,38 @@ module.exports = {
 
 
     getDataFromServer(){
+        console.log("i am cruuently in getDataFromServerrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr function========================================")
         return models.kmb
-        .findAll()
+        .findAll({
+            order:['id']
+        })
         .then(response=>{
             return response;
+        })
+    },
+
+    updateRecord(input){
+        return models.kmb
+        .update(
+            {
+            開始時間:input.startTime,
+            結束時間:input.endTime, 
+            總行程時間:input.total,
+            Instagram記錄連結:input.igLink,
+            備註:input.remake,
+            }
+        ,
+        {
+            where:{
+                id: input.target.id,
+                路線所屬公司 : input.target.路線所屬公司,
+                路線: input.target.路線
+            }
+        }
+        ).then(respFromServer=>{
+            console.log("I just finish the update function and here is the response ! ")
+            console.log(respFromServer)
+            return respFromServer
         })
     }
 }
