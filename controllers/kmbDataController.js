@@ -67,7 +67,7 @@ module.exports = {
 
 
   updateRecord:(req, res)=>{
-
+    console.log("EXECUTING UPDATE FUNCTION+++++++++++++++++++++++")
     let temp = req.body
     console.log(req.body)
 
