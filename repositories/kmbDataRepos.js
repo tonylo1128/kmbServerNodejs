@@ -68,7 +68,7 @@ module.exports = {
     updateRecord(input){
         let state=""
         if(input.開始時間 !=""  &&  input.結束時間 !="")
-            state= "完成挑戰"
+            state= "完成"
         else
             state= "未完成"
 
