@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "tppzlmfygkioiv",
-    "password": "d27668e8099bc1ee1507bcce6bc6b5eec838808e898e1c81fae6d08a0358c23e",
-    "database": "dfgc95b6ft6dl",
-    "host": "ec2-3-213-192-58.compute-1.amazonaws.com",
+    "username": "rgwjkjfnnxoscm",
+    "password": "9726d24b9f01d43b29f69e708f0b69c465fe6e4e58129c96107b871db0df87ad",
+    "database": "d3vjbo6hj3hiaf",
+    "host": "ec2-34-197-188-147.compute-1.amazonaws.com",
     "dialect": "postgresql",
     "operatorsAliases": false,
     "dialectOptions": {
