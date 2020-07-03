@@ -4,7 +4,8 @@ const http = require("http");
 module.exports = {
   postDataFunc: (req, res) => {
     const temp = req.body.kmbData;
-
+    // console.log("dllmmmmmmmmmmmmmm")
+    // console.log(temp)
     kmbDataRepos.insertRecordS(temp);
   },
 
@@ -72,8 +73,16 @@ module.exports = {
     })
   },
 
-  deleteOne: (req, res)=>{
-    console.log("Congrats ! it work ! sucker !! You are in deleteOneFunction now ! ! !")
+  deleteAll: (req, res)=>{
+    // console.log("Congrats ! it work ! sucker !! You are in deleteOneFunction now ! ! !")
+
+    kmbDataRepos.deleteAll()
+    .then( (resp)=>{
+      res.json({
+        resp
+      })
+    })
+    
   },
 
 

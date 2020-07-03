@@ -42,6 +42,15 @@ module.exports = {
       備註: {
         type: Sequelize.STRING
       },
+
+      可挑戰: {
+        type: Sequelize.STRING
+      },
+
+      聯營: {
+        type: Sequelize.STRING
+      },
+      
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

@@ -11,7 +11,9 @@ module.exports = (sequelize, DataTypes) => {
     結束時間: DataTypes.STRING,
     總行程時間: DataTypes.STRING,
     Instagram記錄連結: DataTypes.STRING,
-    備註: DataTypes.STRING
+    備註: DataTypes.STRING,
+    可挑戰: DataTypes.STRING,
+    聯營: DataTypes.STRING,
   }, {
     charset: 'utf8',
     collate: 'utf8_unicode_ci'

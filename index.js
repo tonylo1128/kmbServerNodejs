@@ -24,10 +24,11 @@ app.get("/getspecific", kmbDataCon.getSpecific )
 
 app.post("/seaching", kmbDataCon.searchingFunc)
 
-app.delete("/delete",kmbDataCon.deleteOne)
+// app.delete("/delete",kmbDataCon.deleteOne)
 
 app.put("/update", kmbDataCon.updateRecord)
 
+app.delete("/deleleallrecord", kmbDataCon.deleteAll)
 // app.delete("/deleteall",kmbDataCon.delete)
 
 app.listen(port, function(){

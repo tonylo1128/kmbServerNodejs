@@ -3,7 +3,8 @@ const { Op } = require("sequelize");
 
 module.exports = {
     insertRecordS(input){
-
+        console.log("dllmmmmmmmmmmmmmm")
+        console.log(input[0])
         return models.kmb
         .bulkCreate(
             input
@@ -57,7 +58,9 @@ module.exports = {
                     {結束時間: input},
                     {總行程時間: input},
                     {Instagram記錄連結: input},
-                    {備註: input}
+                    {備註: input},
+                    {可挑戰:input},
+                    {聯營:input},
 
                 ]
             }
@@ -79,6 +82,18 @@ module.exports = {
         .then(response=>{
             return response;
         })
+    },
+
+    deleteAll(){
+        return models.kmb
+        .destroy({
+            truncate:true
+        })
+        .then(
+            resp=>{
+                return resp
+            }
+        )
     },
 
     updateRecord(input){
@@ -111,5 +126,8 @@ module.exports = {
             console.log(respFromServer)
             return respFromServer
         })
+
+
+        
     }
 }
