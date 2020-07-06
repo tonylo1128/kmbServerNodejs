@@ -4,9 +4,15 @@ const http = require("http");
 module.exports = {
   postDataFunc: (req, res) => {
     const temp = req.body.kmbData;
+    console.log(temp)
     // console.log("dllmmmmmmmmmmmmmm")
     // console.log(temp)
-    kmbDataRepos.insertRecordS(temp);
+    kmbDataRepos.insertRecordS(temp)
+    .then((resp)=>{
+      res.json({
+        resp
+      })
+    });
   },
 
 

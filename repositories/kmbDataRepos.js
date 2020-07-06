@@ -4,12 +4,15 @@ const { Op } = require("sequelize");
 module.exports = {
     insertRecordS(input){
         console.log("dllmmmmmmmmmmmmmm")
-        console.log(input[0])
+        // console.log(input[0])
         return models.kmb
         .bulkCreate(
             input
         ,
-        { returning: true });
+        { returning: true })
+        .then(resp=>{
+            resp
+        });
     },
 
     PartOfDataPerPageFunc(page, perPage){
